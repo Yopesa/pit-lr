@@ -32,15 +32,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('catalog') }}">{{ __('Каталог') }}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('basket') }}">{{ __('Корзина') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('sales') }}">{{ __('Акции') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('about') }}">{{ __('О Пиццерии') }}</a>
-                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

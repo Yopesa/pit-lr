@@ -12,21 +12,11 @@ class WebController extends Controller
         return view('home');
     }
 
-    public function about()
-    {
-
-
-        return view('about');
+    public function catalog(){
+        return view('catalog');
     }
 
-    public function sales()
-    {
-        return view('sales');
-    }
-
-    public function admin()
-    {
+    public function admin(){
         return view('admin');
     }
-
 }
