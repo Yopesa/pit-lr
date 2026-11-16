@@ -54,11 +54,13 @@
             @forelse($products as $product)
                 <div class="col">
                     <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                        <div class="p-4 text-center bg-light">
-                            <div class="bg-secondary bg-opacity-10 rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
-                                <span class="text-muted small">{{ $product->name }}</span>
-                            </div>
+                        <div class="p-4 text-center bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <img src="{{ asset('public/img/' . $product->img) }}"
+                                 alt="{{ $product->name }}"
+                                 class="object-fit-contain"
+                                 style="max-height: 160px;">
                         </div>
+
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title fw-bold mb-2">{{ $product->name }}</h5>
                             <p class="card-text text-muted small flex-grow-1">{{ $product->description }}</p>
@@ -86,10 +88,11 @@
                 <div class="modal-content rounded-4 border-0 p-3 shadow-lg">
                     <div class="modal-body p-0">
                         <div class="row g-4">
-                            <div class="col-md-6 d-flex align-items-center justify-content-center bg-light rounded-4 p-4">
-                                <div class="bg-secondary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 250px; height: 250px;">
-                                    <span class="text-muted fw-bold">{{ $product->name }}</span>
-                                </div>
+                            <div class="col-md-6 d-flex align-items-center justify-content-center bg-light rounded-4 p-4" style="min-height: 280px;">
+                                <img src="{{ asset('public/img/' . $product->img) }}"
+                                     alt="{{ $product->name }}"
+                                     class="object-fit-contain"
+                                     style="max-height: 240px;">
                             </div>
                             <div class="col-md-6 d-flex flex-column justify-content-between">
                                 <div>

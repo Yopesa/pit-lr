@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\WebController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/catalog', [App\Http\Controllers\ProductController::class, 'catalog'])->name('catalog');
 
 Route::get('/basket', [App\Http\Controllers\BasketController::class, 'basket'])->name('basket');

@@ -46,9 +46,13 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link text-success" href="{{ route('admin') }}">{{ __('Админ') }}</a>
-                        </li>
+                        @auth
+                            @if (Auth::user()->id_role == 2)
+                                <li class="nav-item">
+                                    <a class="nav-link text-success" href="{{ route('admin') }}">{{ __('Админ') }}</a>
+                                </li>
+                            @endif
+                        @endauth
                         <!-- Authentication Links -->
                         @guest
 
